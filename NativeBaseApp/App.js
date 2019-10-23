@@ -9,7 +9,7 @@ export default function App() {
   const store = createStore(Reducers, {}, applyMiddleware(ReduxThunk))
   return (
     <Provider store={store} >
-      <AppNavigator />
+      <AppNavigator/>
     </Provider>
   )
 }
