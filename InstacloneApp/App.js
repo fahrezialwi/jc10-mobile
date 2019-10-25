@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import firebase from 'firebase'
 import RegisterScreen from './src/screens/RegisterScreen'
+import MainSwitchNavigator from './src/navigators/MainSwitchNavigator'
 
 export default function App() {
 
@@ -19,18 +20,6 @@ export default function App() {
   firebase.initializeApp(firebaseConfig);
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <RegisterScreen/>
-    </View>
+    <MainSwitchNavigator/>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
